@@ -1,0 +1,432 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container */
+
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Header */
+
+.header{
+    background-image: linear-gradient(
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.4)),
+        url(../multimedia/imagenes/fondo-helado-6.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 7rem;
+    height: 7rem;
+}
+
+.bi{
+    font-size: 1.5rem;
+    color: white;
+}
+
+.bi:hover{
+    transition: 0.7s;
+    color: #ff8400;
+}
+
+.navbar{
+    margin: 10px;
+    border-radius: 20px;
+    transition: background-color 0.5s ease;
+}
+
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+    background-color: white;
+    margin-left: 1rem;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.navbar-toggler:focus, .btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link, .nav-link.active{
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active:hover{
+    color: #ff8400;
+}
+
+.nav-link::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #ff8400;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover::before, .nav-link.active::before{
+    width: 100%;
+    visibility: visible;
+}
+
+.offcanvas{
+    background-color: #3287c0;
+}
+
+.offcanvas-header h5{
+    color: white;
+}
+
+/**/
+
+.header-content{
+    text-align: center;
+}
+
+.header-content h1{
+    font-size: 75px;
+    line-height: 80px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.header-content p{
+    font-size: 16px;
+    color: white;
+    padding: 0 250px;
+    margin-bottom: 50px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 11px 35px;
+    background-color: #D98324;
+    color: white;
+    font-weight:bold;
+    text-transform: uppercase;
+}
+
+.btn:hover{
+    transition: 0.7s;
+    background-color: #F2F6D0;
+    color: #443627;
+}
+
+/* Sección de ubicaciones */
+
+.locations{
+    padding: 100px;
+    background-color: #D98324;
+    position: relative;
+    text-align: center;
+}
+
+.locations-content h2{
+    text-align: center;
+    color: #443627;
+}
+
+/* Texto */
+
+.txt-p{
+   font-size: 16px; 
+   color: #443627;
+   padding: 0 250px;
+   margin-bottom: 50px;
+}
+
+.locations-group{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.location-item{
+    padding: 0 25px;
+    margin: 0 10px;
+    background-color: #F2F6D0;
+    border-radius: 5%;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.location-item:hover{
+    transform: scale(1.1);
+}
+
+.location-img{
+    height: 300px;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.location-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.location-item:hover .location-img img{
+    transform: scale(1.05);
+}
+
+.location-info{
+    padding: 25px;
+}
+
+.location-info h3{
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #443627;
+}
+
+.location-info p{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #443627;
+}
+
+.location-info .material-symbols-outlined{
+    margin-right: 10px;
+    color: #3287c0;
+}
+
+.location-features{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.feature{
+    background-color: #a8edea;
+    color: #443627;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Sección del mapa */
+
+.map-section{
+    padding: 80px 0;
+    background-color: #443627;
+}
+
+.map-section h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #F2F6D0;
+}
+
+.map-container{
+    border-radius: 20px;
+    overflow: hidden;
+    background: #D98324;
+    padding: 20px;
+}
+
+.map-placeholder{
+    height: 400px;
+    background: #3287c0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius);
+    color: #F2F6D0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.map-placeholder p{
+    color: #F2F6D0;
+    font-size: 1.5rem;
+}
+
+.map-legend{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.legend-item{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.map-marker{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.map-marker.condesa{
+    background-color: #FF6B8B;
+}
+
+.map-marker.roma{
+    background-color: #4ECDC4;
+}
+
+.map-marker.coyoacan{
+    background-color: #FFD166;
+}
+
+/* Servicio a domicilio */
+
+.delivery-info{
+    padding: 80px 0;
+    background: #3287c0;
+    color: white;
+}
+
+.delivery-content h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.delivery-group{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    color: #F2F6D0;
+}
+
+.delivery-item{
+    text-align: center;
+    padding: 30px 20px;
+    background: #D98324;
+    border-radius: 5%;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.delivery-item:hover{
+    transform: translateY(-10px);
+}
+
+.delivery-item .material-symbols-outlined {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #F2F6D0;
+}
+
+.delivery-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+.footer{
+    padding: 100px 0;
+    background-color: #443627;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-around;
+}
+
+.link h3{
+    font-size: 18px;
+    color: #F2F6D0;
+    margin-bottom: 15px;
+}
+
+.link p{
+    font-size: 16px;
+    color: #F2F6D0;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.link a{
+    font-size: 16px;
+    color: #F2F6D0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.link a span{
+    margin-right: 10px;
+}
+
+.link ul li a i{
+    color: #F2F6D0;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+/* Estilo de la caja flotante */
+.caja-flotante {
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    max-width: 300px;
+    color: white;
+}
+
+.caja-flotante:hover {
+    transform: translateY(-5px);
+}
+
+.abierto {
+    background-color: #d4edda;
+    color: #155724;
+    border: 2px solid #c3e6cb;
+}
+
+.cerrado {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 2px solid #f5c6cb;
+}

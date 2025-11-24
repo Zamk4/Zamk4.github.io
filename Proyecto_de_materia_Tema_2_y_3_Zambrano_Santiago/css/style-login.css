@@ -1,0 +1,393 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.4)),
+        url(../multimedia/imagenes/fondo-helado.jpg);
+
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Contenedor */
+
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Header */
+
+.header{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 7rem;
+    height: 7rem;
+}
+
+.bi{
+    font-size: 1.5rem;
+    color: white;
+}
+
+.bi:hover{
+    transition: 0.7s;
+    color: #ff8400;
+}
+
+.navbar{
+    margin: 10px;
+    border-radius: 20px;
+    transition: background-color 0.5s ease;
+}
+
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+    background-color: white;
+    margin-left: 1rem;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.navbar-toggler:focus, .btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link, .nav-link.active{
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active:hover{
+    color: #ff8400;
+}
+
+.nav-link::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #ff8400;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover::before, .nav-link.active::before{
+    width: 100%;
+    visibility: visible;
+}
+
+.offcanvas{
+    background-color: #3287c0;
+}
+
+.offcanvas-header h5{
+    color: white;
+}
+
+/*Header*/
+
+.header-content{
+    text-align: center;
+}
+
+.header-content h1{
+    font-size: 75px;
+    line-height: 80px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.header-content p{
+    font-size: 16px;
+    color: white;
+    padding: 0 250px;
+    margin-bottom: 50px;
+}
+
+/* Formulario - Login */
+
+.formulario{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #ffffff;
+    border-radius: 10px;
+    margin-top: 80px;
+    background-color: #F2F6D0;
+}
+
+.formulario h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 3px solid #3287c0;
+    color: #3287c0;
+}
+
+.formulario form{
+    padding: 0 40px;
+    box-sizing: border-box;
+
+}
+
+form .username{
+    position: relative;
+    border-bottom: 2px solid #3287c0;
+    margin: 30px 0;
+}
+
+.username input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.username label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #b6afaf;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: color 0.8s ease;
+}
+
+.username span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #1100ff;
+    transition: .5s;
+}
+
+.username input:focus ~ label,
+.username input:not(:placeholder-shown) ~ label{
+    top: -5px;
+    font-weight: bold;
+    color: #4f65ac;
+}
+
+.username input:focus ~ span::before,
+.username input:focus ~ span::before{
+    width: 100%;
+}
+/*---------------------------------------------*/
+
+
+
+form .password{
+    position: relative;
+    border-bottom: 2px solid #b6afaf;
+    margin: 30px 0;
+}
+
+.password input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.password label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #b6afaf;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: color 0.8s ease;
+}
+
+.password span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #4f65ac;
+    transition: .5s;
+}
+
+.password input:focus ~ label,
+.password input:not(:placeholder-shown) ~ label{
+  top: -5px;
+  color: #4f65ac;
+  font-weight: bold;
+}
+
+.password input:focus ~ span::before,
+.password input:focus ~ span::before{
+    width: 100%;
+}
+
+.remember{
+    margin: -5px 0 20px 5px;
+    color: rgb(79, 101, 172);
+    cursor: pointer;
+}
+
+.remember:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.login{
+   
+    border-radius: 8px;
+    width: 90px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #F2F6D0;
+    background-color: #6a9cca;
+}
+
+.login:hover{
+    background-color: #D98324;
+    border-color: #443627;
+    font-weight: bold;
+}
+
+.sign-up{
+    
+    border-radius: 8px;
+    width: 90px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #6a9cca;
+}
+
+.sign-up:hover{
+    background-color: #363636;
+    border-color: rgb(113, 195, 250);
+    font-weight: bold;
+}
+
+/* Botones */
+
+.buttons{
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons button{
+    width: 200px;
+}
+
+
+
+/*--------------------------DISEÑO DE ICONOS----------------------------*/
+.username i, .password i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #728ee7;
+    font-size: 18px;
+}
+
+.password i{
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.password i:hover{
+    color: #4f65ac;
+    transform: translateY(-50%) scale(1.2);
+}
+
+.registro{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #686e83;
+}
+
+.registro a{
+    color: #0e34b3;
+    text-decoration: none;
+}
+
+.registro a:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Estilo de la caja flotante */
+.caja-flotante {
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    max-width: 300px;
+    color: white;
+}
+
+.caja-flotante:hover {
+    transform: translateY(-5px);
+}
+
+.abierto {
+    background-color: #d4edda;
+    color: #155724;
+    border: 2px solid #c3e6cb;
+}
+
+.cerrado {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 2px solid #f5c6cb;
+}

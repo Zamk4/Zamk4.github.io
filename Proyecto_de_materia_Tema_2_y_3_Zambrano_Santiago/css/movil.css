@@ -1,0 +1,186 @@
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* .menu{
+    padding: 30px;
+}
+
+.menu label{
+    display: initial;
+} */
+
+/* .menu .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgb(4, 87, 134);
+    display: none;
+}
+
+.menu-icon {
+    width: 40px;
+    display: block;
+}
+
+.menu .navbar ul li{
+    width: 100%;
+}
+
+.menu .navbar ul li a:hover{
+    transition: 0.7s;
+    color: #D98324;
+    background-color: rgb(22, 53, 109);
+    scale: 1.05;
+}
+
+#menu:checked ~ .navbar{
+    display: initial;
+} */
+
+.header{
+    min-height: 0vh;
+}
+
+.header-content{
+    padding: 100px 30px;
+}
+
+.header-content p{
+    padding: 0;
+}
+
+.header-content h1{
+    margin-top: 80px;
+    font-size: 70px;
+}
+
+.ice-cream{
+    padding: 30px;
+}
+
+.ice-cream-content h2{
+    padding: 0;
+}
+
+.txt-p{
+    padding: 0;
+}
+
+.ice-cream-group{
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.ice-cream-product{
+    margin-bottom: 35px;
+}
+
+.moras{
+    display: none;
+}
+
+.services{
+    padding: 30px;
+}
+
+.services-content p{
+    padding: 0;
+}
+
+.services-group{
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-1{
+    margin-bottom: 35px;
+}
+
+.general{
+    flex-direction: column;
+}
+
+.general-1{
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+}
+
+.general-2, .general-3{
+    display: none;
+}
+
+.footer{
+    padding: 30px;
+}
+
+.footer-content{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.link{
+    margin-top: 20px;
+}
+
+.location-item{
+    padding: 0 25px;
+    margin: 0 10px;
+    background-color: #F2F6D0;
+    border-radius: 2%;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.location-item:hover{
+    transform: scale(1.05);
+}
+
+.location-img{
+    height: 300px;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.location-img img{
+    width: 90%;
+    height: 80%;
+    border-radius: 5%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.location-info{
+    padding: 0;
+}
+
+.delivery-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+    color: #F2F6D0;
+}
+
+.delivery-item{
+    text-align: center;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding: 20px 10px;
+    background: #D98324;
+    border-radius: 5%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.map-placeholder p{
+    text-align: center;
+}
+
+.about-image img{
+    width: 50%;
+}
